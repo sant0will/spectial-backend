@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 router.get("/", async (req, res) => {
-    const { teacher } = req;
+    return(req);
 
     if (await Student.findOne({ teacher }))
         return res.status(400).send({ error: "Não existem alunos cadastrados." });
