@@ -116,7 +116,7 @@ router.post('/reset_password', async (req, res) => {
         if (token !== user.passwordResetToken) {
             return res.status(400).send({ error: "Token invalido" });
         }
-
+        
         const now = new Date();
 
         if (now > user.passwordResetExpires) {
