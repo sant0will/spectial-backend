@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
+mongoose.set('useUnifiedTopology', true);
 
 mongoose.connect('mongodb+srv://spectial:spectialwill@cluster0-z1a0k.mongodb.net/test0', { useNewUrlParser: true });
 mongoose.Promise = global.Promise;

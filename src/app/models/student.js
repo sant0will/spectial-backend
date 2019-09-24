@@ -1,4 +1,5 @@
 const mongoose = require('../../database');
+const Schema = mongoose.Schema;
 
 const StudentSchema = mongoose.Schema({
     name: {

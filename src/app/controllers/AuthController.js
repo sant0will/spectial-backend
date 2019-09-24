@@ -52,11 +52,11 @@ router.post("/authenticate", async (req, res) => {
 
     user.password = undefined;
 
-    const token = 
+    const token = generateToken({ id: user.id });
 
     res.send({ 
         user, 
-        token: generateToken({ id: user.id })
+        token
     });
 });
 
